@@ -1,0 +1,8 @@
+package org.formacion.ocp;
+
+import java.util.List;
+
+public interface IOrdenacion {
+		
+		List<Integer> ordenar(List<Integer> primos);
+}

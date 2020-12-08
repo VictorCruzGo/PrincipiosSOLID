@@ -1,0 +1,13 @@
+package org.formacion.ocp;
+
+import java.util.List;
+
+public class OrdenacionInversa implements IOrdenacion {
+
+	@Override
+	public void ordenar(List<Integer> primos) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

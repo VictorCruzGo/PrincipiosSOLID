@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\vic\Documents\Victor Cruz Gomez Windows 10\CursoSOLID\WorkspaceSOLID\.metadata\.plugins\org.eclipse.jdt.core
+4248367930.index
+372580519.index
+443707439.index
+429380330.index

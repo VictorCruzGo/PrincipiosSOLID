@@ -1,0 +1,11 @@
+package org.formacion.ocp;
+
+public class OrdenacionNatural implements IOrdenacion {
+
+	@Override
+	public void ordenar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package org.formacion.ocp;
+
+public interface IOrdenacion {
+		void ordenar();
+}
