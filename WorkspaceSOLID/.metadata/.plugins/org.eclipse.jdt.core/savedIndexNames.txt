@@ -2,4 +2,6 @@ INDEX VERSION 1.131+C:\Users\vic\Documents\Victor Cruz Gomez Windows 10\CursoSOL
 4248367930.index
 372580519.index
 443707439.index
+2060518626.index
+1057386876.index
 429380330.index
