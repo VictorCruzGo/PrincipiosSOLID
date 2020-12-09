@@ -8,12 +8,12 @@ public class Main {
 		
 		Persona madre = new Persona.Builder("Maria")
                 .setMunicipio("Selva")
-                .setMayor(37)
+                .setMayor(37) //Apartir de aqui solo hay metodos para personas mayores
                 .setLugarTrabajo("Google")
                 .build();
 		
 		Persona hijo = new Persona.Builder("Pedro")
-                .setMenor(4)
+                .setMenor(4) //Apartir de aqui solo hay metodod para personas menores
                 .setColegio("Colegio de Selva")
                 .build();
 		

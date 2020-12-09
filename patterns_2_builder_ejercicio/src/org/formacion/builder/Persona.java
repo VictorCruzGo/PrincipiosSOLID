@@ -9,8 +9,7 @@ public class Persona {
 	private String lugarTrabajo;
 	
 	private Persona() {}
-	
-	
+		
 	public static class Builder {
 		private Persona persona;
 		
@@ -23,35 +22,22 @@ public class Persona {
 			persona.municipio = municipio;
 			return this;			
 		}
-
-		public Builder setMayor(int edad) {
+			
+		public BuilderMayor setMayor(int edad) {
 			if (edad < 18) throw new IllegalArgumentException("es menor de edad " + edad);
 			persona.edad = edad;
-			persona.colegio = null;
-			return this;
+			return new Persona.BuilderMayor(persona);
+			//persona.lugarTrabajo = lugarTrabajo;
+			//persona.colegio = null;
+			//return this;
 		}
 		
-		public Builder setMayor(int edad, String lugarTrabajo) {
-			if (edad < 18) throw new IllegalArgumentException("es menor de edad " + edad);
-			persona.edad = edad;
-			persona.lugarTrabajo = lugarTrabajo;
-			persona.colegio = null;
-			return this;
-		}
 		
-		public Builder setMenor(int edad) {
+		public BuilderMenor setMenor(int edad) {
 			if (edad >= 18) throw new IllegalArgumentException("es mayor de edad " + edad);
 			persona.edad = edad;
 			persona.lugarTrabajo = null;
-			return this;
-		}
-		
-		public Builder setMenor(int edad, String colegio) {
-			if (edad >= 18) throw new IllegalArgumentException("es mayor de edad " + edad);
-			persona.edad = edad;
-			persona.colegio = colegio;
-			persona.lugarTrabajo = null;
-			return this;
+			return new Persona.BuilderMenor(persona);
 		}
 	
 		public Builder setLugarTrabajo(String lugarTrabajo) {
@@ -68,6 +54,40 @@ public class Persona {
 			return persona;
 		}
 
+	}
+	
+	public static class BuilderMayor{
+		private Persona persona;
+		
+		private BuilderMayor(Persona persona) {
+			this.persona=persona;
+		}
+		
+		public BuilderMayor setLugarTrabajo(String lugarTrabajo) {
+			this.persona.lugarTrabajo=lugarTrabajo;
+			return this;
+		}
+		
+		public Persona build() {
+			return persona;
+		}
+	}
+	
+	public static class BuilderMenor {
+		private Persona persona;
+		
+		private BuilderMenor(Persona persona) {
+			this.persona=persona;
+		}
+		
+		public BuilderMenor setColegio(String colegio) {
+			this.persona.colegio=colegio;
+			return this;
+		}
+		
+		public Persona build() {
+			return persona;
+		}
 	}
 	
 }
